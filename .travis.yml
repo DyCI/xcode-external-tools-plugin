@@ -2,4 +2,4 @@ language: objective-c
 
 before_script: cd ExternalToolsPlugin/ExternalToolsPluginTests
 
-script: rake
+script: rake ExternalToolsPluginTests
