@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "tools": [
+    {
+      "name": "Echo",
+      "key": {
+        "character": "X",
+        "command": true,
+        "control": false,
+        "shift": true,
+        "option": false
+      },
+      "command": {
+        "line": "echo Hello world!",
+        "input": "none"
+      }
+    },
+    {
+      "name": "Dump Settings",
+      "key": {
+        "character": "X",
+        "command": true,
+        "control": false,
+        "shift": true,
+        "option": false
+      },
+      "command": {
+        "line": "/bin/cat",
+        "input": "json"
+      }
+    }
+  ]
+}
