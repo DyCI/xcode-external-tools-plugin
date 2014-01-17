@@ -7,14 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443FAAE01888AEFC00CECE98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9418888FA9003A3CCA /* Foundation.framework */; };
+		443FAAE61888AEFC00CECE98 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443FAAE51888AEFC00CECE98 /* Cedar.framework */; };
+		443FAAE81888AEFC00CECE98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 443FAAE71888AEFC00CECE98 /* main.m */; };
 		446E3F9318888FA9003A3CCA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9218888FA9003A3CCA /* AppKit.framework */; };
 		446E3F9518888FA9003A3CCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9418888FA9003A3CCA /* Foundation.framework */; };
 		446E3F9B18888FA9003A3CCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446E3F9918888FA9003A3CCA /* InfoPlist.strings */; };
 		446E3F9E18888FA9003A3CCA /* ExternalToolsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */; };
+		4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
+		4523F575B23B343D243D55EA /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
+		4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
+		4523F7D3B4BD5F4342C01DD3 /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
+		4523F829C321F4FFE3F08EA0 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
+		4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE2425180C53911628AB /* ETPKey.m */; };
+		4523F96D5E2656C90168BAE1 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 4523FA1FBE2F1A968D83AACF /* config.json */; };
+		4523FA24300333AEC4B3F7D1 /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
+		4523FEC4331B702B097D4824 /* ETPConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F475FE05DF60773860FA /* ETPConfigSpec.mm */; };
+		4523FF12E2340B6EDBEA6AEE /* ETPKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE2425180C53911628AB /* ETPKey.m */; };
 		4523FF1ADF71BD63EF7B6398 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8213771514D32500BBA /* LogClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		443FAADF1888AEFC00CECE98 /* ExternalToolsPluginTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExternalToolsPluginTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		443FAAE21888AEFC00CECE98 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		443FAAE41888AEFC00CECE98 /* ExternalToolsPluginTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExternalToolsPluginTests-Prefix.pch"; sourceTree = "<group>"; };
+		443FAAE51888AEFC00CECE98 /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Frameworks/Cedar.framework; sourceTree = "<group>"; };
+		443FAAE71888AEFC00CECE98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		446E3F8F18888FA9003A3CCA /* ExternalToolsPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExternalToolsPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		446E3F9218888FA9003A3CCA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		446E3F9418888FA9003A3CCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -23,11 +41,30 @@
 		446E3F9C18888FA9003A3CCA /* ExternalToolsPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalToolsPlugin.h; sourceTree = "<group>"; };
 		446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExternalToolsPlugin.m; sourceTree = "<group>"; };
 		446E3F9F18888FA9003A3CCA /* ExternalToolsPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExternalToolsPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		4523F2BC143F843BBDBE2962 /* ETPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPTool.h; sourceTree = "<group>"; };
+		4523F419980BA6597B8F56D7 /* ETPConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfig.m; sourceTree = "<group>"; };
 		4523F423DDDB75CD71548A49 /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
+		4523F475FE05DF60773860FA /* ETPConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSpec.mm; sourceTree = "<group>"; };
+		4523F515D8C9ED266F1583E0 /* ETPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPTool.m; sourceTree = "<group>"; };
+		4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPCommand.m; sourceTree = "<group>"; };
+		4523F79209BDF067387828F8 /* ETPCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPCommand.h; sourceTree = "<group>"; };
 		4523F8213771514D32500BBA /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogClient.m; sourceTree = "<group>"; };
+		4523F97B6BDA644FB3A845C0 /* ETPKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPKey.h; sourceTree = "<group>"; };
+		4523FA1FBE2F1A968D83AACF /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
+		4523FA40BBD911DD677E0D07 /* ETPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPConfig.h; sourceTree = "<group>"; };
+		4523FE2425180C53911628AB /* ETPKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPKey.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		443FAADD1888AEFC00CECE98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443FAAE61888AEFC00CECE98 /* Cedar.framework in Frameworks */,
+				443FAAE01888AEFC00CECE98 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		446E3F8C18888FA9003A3CCA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		443FAAE11888AEFC00CECE98 /* ExternalToolsPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				443FAAE21888AEFC00CECE98 /* Rakefile */,
+				443FAAE51888AEFC00CECE98 /* Cedar.framework */,
+				443FAAE71888AEFC00CECE98 /* main.m */,
+				443FAAE31888AEFC00CECE98 /* Supporting Files */,
+				4523F475FE05DF60773860FA /* ETPConfigSpec.mm */,
+			);
+			path = ExternalToolsPluginTests;
+			sourceTree = "<group>";
+		};
+		443FAAE31888AEFC00CECE98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				443FAAE41888AEFC00CECE98 /* ExternalToolsPluginTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		446E3F8618888FA9003A3CCA = {
 			isa = PBXGroup;
 			children = (
 				446E3F9618888FA9003A3CCA /* ExternalToolsPlugin */,
+				443FAAE11888AEFC00CECE98 /* ExternalToolsPluginTests */,
 				446E3F9118888FA9003A3CCA /* Frameworks */,
 				446E3F9018888FA9003A3CCA /* Products */,
 			);
@@ -53,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				446E3F8F18888FA9003A3CCA /* ExternalToolsPlugin.xcplugin */,
+				443FAADF1888AEFC00CECE98 /* ExternalToolsPluginTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +132,7 @@
 				446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */,
 				446E3F9718888FA9003A3CCA /* Supporting Files */,
 				4523F9953A0F3CCC13062D0C /* PluginConsole */,
+				4523F281BE21D98366E1912C /* Configuration */,
 			);
 			path = ExternalToolsPlugin;
 			sourceTree = "<group>";
@@ -85,6 +145,22 @@
 				446E3F9F18888FA9003A3CCA /* ExternalToolsPlugin-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4523F281BE21D98366E1912C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4523FA1FBE2F1A968D83AACF /* config.json */,
+				4523F419980BA6597B8F56D7 /* ETPConfig.m */,
+				4523FA40BBD911DD677E0D07 /* ETPConfig.h */,
+				4523F515D8C9ED266F1583E0 /* ETPTool.m */,
+				4523F2BC143F843BBDBE2962 /* ETPTool.h */,
+				4523FE2425180C53911628AB /* ETPKey.m */,
+				4523F97B6BDA644FB3A845C0 /* ETPKey.h */,
+				4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */,
+				4523F79209BDF067387828F8 /* ETPCommand.h */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		4523F9953A0F3CCC13062D0C /* PluginConsole */ = {
@@ -107,6 +183,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		443FAADE1888AEFC00CECE98 /* ExternalToolsPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443FAAED1888AEFC00CECE98 /* Build configuration list for PBXNativeTarget "ExternalToolsPluginTests" */;
+			buildPhases = (
+				443FAADB1888AEFC00CECE98 /* ShellScript */,
+				443FAADC1888AEFC00CECE98 /* Sources */,
+				443FAADD1888AEFC00CECE98 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExternalToolsPluginTests;
+			productName = ExternalToolsPluginTests;
+			productReference = 443FAADF1888AEFC00CECE98 /* ExternalToolsPluginTests */;
+			productType = "com.apple.product-type.tool";
+		};
 		446E3F8E18888FA9003A3CCA /* ExternalToolsPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 446E3FA218888FA9003A3CCA /* Build configuration list for PBXNativeTarget "ExternalToolsPlugin" */;
@@ -146,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				446E3F8E18888FA9003A3CCA /* ExternalToolsPlugin */,
+				443FAADE1888AEFC00CECE98 /* ExternalToolsPluginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,18 +250,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				446E3F9B18888FA9003A3CCA /* InfoPlist.strings in Resources */,
+				4523F96D5E2656C90168BAE1 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		443FAADB1888AEFC00CECE98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R \"${TARGET_NAME}\"/Frameworks/Cedar.framework \"${BUILT_PRODUCTS_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		443FAADC1888AEFC00CECE98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443FAAE81888AEFC00CECE98 /* main.m in Sources */,
+				4523FEC4331B702B097D4824 /* ETPConfigSpec.mm in Sources */,
+				4523F7D3B4BD5F4342C01DD3 /* ETPConfig.m in Sources */,
+				4523FA24300333AEC4B3F7D1 /* ETPTool.m in Sources */,
+				4523F829C321F4FFE3F08EA0 /* ETPCommand.m in Sources */,
+				4523FF12E2340B6EDBEA6AEE /* ETPKey.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		446E3F8B18888FA9003A3CCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				446E3F9E18888FA9003A3CCA /* ExternalToolsPlugin.m in Sources */,
 				4523FF1ADF71BD63EF7B6398 /* LogClient.m in Sources */,
+				4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */,
+				4523F575B23B343D243D55EA /* ETPTool.m in Sources */,
+				4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */,
+				4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +313,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		443FAAEB1888AEFC00CECE98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/DATA/Projects/Work/xcode-external-tools-plugin/ExternalToolsPlugin/ExternalToolsPluginTests/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExternalToolsPluginTests/ExternalToolsPluginTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		443FAAEC1888AEFC00CECE98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/DATA/Projects/Work/xcode-external-tools-plugin/ExternalToolsPlugin/ExternalToolsPluginTests/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExternalToolsPluginTests/ExternalToolsPluginTests-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		446E3FA018888FA9003A3CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,6 +444,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		443FAAED1888AEFC00CECE98 /* Build configuration list for PBXNativeTarget "ExternalToolsPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443FAAEB1888AEFC00CECE98 /* Debug */,
+				443FAAEC1888AEFC00CECE98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		446E3F8A18888FA9003A3CCA /* Build configuration list for PBXProject "ExternalToolsPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -302,6 +468,7 @@
 				446E3FA418888FA9003A3CCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
