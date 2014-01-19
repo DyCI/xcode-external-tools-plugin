@@ -12,4 +12,5 @@
 @property(nonatomic, strong) NSString * version;
 
 + (ETPConfig *)configWithJSONString:(NSString *)string;
+
 @end
