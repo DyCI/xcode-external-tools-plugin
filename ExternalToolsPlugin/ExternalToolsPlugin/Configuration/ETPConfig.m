@@ -19,8 +19,11 @@
       [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding]
                                       options:0
                                         error:nil];
-    ETPConfig * config = [self configWithJSONObject:jsonObject];
-    return config;
+    if (jsonObject) {
+        ETPConfig * config = [self configWithJSONObject:jsonObject];
+        return config;
+    }
+    return nil;
 }
 
 
