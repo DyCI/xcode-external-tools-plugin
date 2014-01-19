@@ -4,10 +4,18 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ETPConfig;
 
 
 @interface ETPConfigurationLocator : NSObject
 
 @property(nonatomic, strong) NSFileManager * fileManager;
+
+/*
+File path that is
+ */
+- (NSString *)fileConfigurationPath;
+
+- (ETPConfig *)configuration;
 
 @end

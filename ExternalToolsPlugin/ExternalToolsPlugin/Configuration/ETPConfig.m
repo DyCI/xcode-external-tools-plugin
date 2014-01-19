@@ -75,4 +75,16 @@
 }
 
 
++ (ETPConfig *)defaultConfig {
+    ETPConfig * config = [ETPConfig new];
+    config.version = ETP_CONFIG_VERSION;
+
+    ETPTool * tool = [ETPTool new];
+    tool.name = ETP_CONFIG_DEFAULT_TOOL;
+
+    ETPCommand * command = [ETPCommand commandWithCommandLine:ETP_CONFIG_DEFAULT_TOOL_COMMAND_LINE inputType:ETPInputTypeNone];
+    tool.command = command;
+    config.tools = @[tool];
+    return config;
+}
 @end

@@ -9,4 +9,17 @@
 @implementation ETPCommand {
 
 }
+- (instancetype)initWithCommandLine:(NSString *)commandLine inputType:(ETPInputType)inputType {
+    self = [super init];
+    if (self) {
+        _commandLine = commandLine;
+        _inputType = inputType;
+    }
+    return self;
+}
+
++ (instancetype)commandWithCommandLine:(NSString *)commandLine inputType:(ETPInputType)inputType {
+    return [[self alloc] initWithCommandLine:commandLine inputType:inputType];
+}
+
 @end

@@ -18,6 +18,7 @@
 		4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
 		4523F2EFA8A9945BFDF2DF93 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9218888FA9003A3CCA /* AppKit.framework */; };
 		4523F575B23B343D243D55EA /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
+		4523F660FEC2BCF9A4CB13BF /* ETPConfigSharedExamples.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */; };
 		4523F66C21C4F931FE38F8F7 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8213771514D32500BBA /* LogClient.m */; };
 		4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
 		4523F7D3B4BD5F4342C01DD3 /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
@@ -58,6 +59,7 @@
 		4523F79209BDF067387828F8 /* ETPCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPCommand.h; sourceTree = "<group>"; };
 		4523F7BF4C9B120C23646912 /* ETPConfigurationLocatorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigurationLocatorSpec.mm; sourceTree = "<group>"; };
 		4523F8213771514D32500BBA /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogClient.m; sourceTree = "<group>"; };
+		4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSharedExamples.mm; sourceTree = "<group>"; };
 		4523F97B6BDA644FB3A845C0 /* ETPKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPKey.h; sourceTree = "<group>"; };
 		4523FA1FBE2F1A968D83AACF /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
 		4523FA40BBD911DD677E0D07 /* ETPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPConfig.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				4523F475FE05DF60773860FA /* ETPConfigSpec.mm */,
 				4523F4E04C2FFF3600CAE0BA /* ExternalToolsPluginSpec.mm */,
 				4523F7BF4C9B120C23646912 /* ETPConfigurationLocatorSpec.mm */,
+				4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */,
 			);
 			path = ExternalToolsPluginTests;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				4523F025AD8B4C376C931E56 /* ETPConfigurationLocatorSpec.mm in Sources */,
 				4523FDC5B532CEB02CC33007 /* ExternalToolsPlugin.m in Sources */,
 				4523F66C21C4F931FE38F8F7 /* LogClient.m in Sources */,
+				4523F660FEC2BCF9A4CB13BF /* ETPConfigSharedExamples.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
