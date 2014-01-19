@@ -20,5 +20,6 @@
 Returns base
  */
 + (ETPConfig *)defaultConfig;
++ (NSString *)defaultConfigJSONString;
 
 @end

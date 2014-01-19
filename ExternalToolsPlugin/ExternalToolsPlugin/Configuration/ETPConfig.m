@@ -79,15 +79,34 @@
 
 
 + (ETPConfig *)defaultConfig {
-    ETPConfig * config = [ETPConfig new];
-    config.version = ETP_CONFIG_VERSION;
-
-    ETPTool * tool = [ETPTool new];
-    tool.name = ETP_CONFIG_DEFAULT_TOOL;
-
-    ETPCommand * command = [ETPCommand commandWithCommandLine:ETP_CONFIG_DEFAULT_TOOL_COMMAND_LINE inputType:ETPInputTypeNone];
-    tool.command = command;
-    config.tools = @[tool];
-    return config;
+    return [ETPConfig configWithJSONString:[self defaultConfigJSONString]];
 }
+
+
++ (NSString *)defaultConfigJSONString {
+    NSDictionary * configJSON =
+    @{
+      @"version" : ETP_CONFIG_VERSION,
+      @"tools" : @[
+      @{
+        @"name" : ETP_CONFIG_DEFAULT_TOOL,
+        @"key" : @{
+        @"character" : @"X",
+        @"command" : @YES,
+        @"control" : @NO,
+        @"shift" : @YES,
+        @"option" : @NO
+      },
+        @"command" : @{
+        @"line" : ETP_CONFIG_DEFAULT_TOOL_COMMAND_LINE,
+        @"input" : @"none"
+      }
+      }
+    ]
+    };
+
+    NSData * data = [NSJSONSerialization dataWithJSONObject:configJSON options:0 error:nil];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
 @end
