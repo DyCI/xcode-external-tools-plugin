@@ -8,6 +8,7 @@
 
 #import "ExternalToolsPlugin.h"
 #import "LogClient.h"
+#import "ETPConfigurationLoader.h"
 
 static ExternalToolsPlugin * sharedPlugin;
 
@@ -36,21 +37,35 @@ static ExternalToolsPlugin * sharedPlugin;
     if (self = [super init]) {
         // reference to plugin's bundle, for resource acccess
         self.bundle = plugin;
+        self.configurationLoader = [ETPConfigurationLoader new];
 
+        [[NSNotificationCenter defaultCenter]
+          addObserverForName:NSApplicationDidFinishLaunchingNotification
+                      object:nil
+                       queue:nil
+                  usingBlock:^(NSNotification * note) {
+                      [self setupMenuItems];
+                  }
+        ];
         // Create menu items, initialize UI, etc.
-
-        // Sample Menu Item:
-        NSMenuItem * menuItem = [[NSApp mainMenu] itemWithTitle:@"File"];
-        if (menuItem) {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem * actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action"
-                                                                     action:@selector(doMenuAction)
-                                                              keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [[menuItem submenu] addItem:actionMenuItem];
-        }
     }
     return self;
+}
+
+
+- (void)setupMenuItems {
+
+    ETPConfig * config = [self.configurationLoader loadConfiguration];
+    // Sample Menu Item:
+    NSMenuItem * menuItem = [[NSApp mainMenu] itemWithTitle:@"File"];
+    if (menuItem) {
+        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+        NSMenuItem * actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action"
+                                                                 action:@selector(doMenuAction)
+                                                          keyEquivalent:@""];
+        [actionMenuItem setTarget:self];
+        [[menuItem submenu] addItem:actionMenuItem];
+    }
 }
 
 

@@ -105,7 +105,16 @@ describe(@"ETPConfig", ^{
             [key2 modifierMask] should equal(NSCommandKeyMask | NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask);
         });
 
+    });
 
+    context(@"When created default config", ^{
+
+        beforeEach(^{
+            model = [ETPConfig defaultConfig];
+            [SpecHelper specHelper].sharedExampleContext[@"config"] = model;
+        });
+
+        itShouldBehaveLike(@"Default config");
     });
 
 });

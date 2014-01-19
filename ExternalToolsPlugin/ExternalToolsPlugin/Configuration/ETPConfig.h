@@ -5,6 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define ETP_CONFIG_VERSION                    @"0.1"
+#define ETP_CONFIG_DEFAULT_TOOL               @"External tools usage"
+#define ETP_CONFIG_DEFAULT_TOOL_COMMAND_LINE  @"open \"https://github.com/DyCI/xcode-external-tools-plugin/wiki/External-tools-plugin#configuration\""
 
 @interface ETPConfig : NSObject
 
@@ -12,4 +15,11 @@
 @property(nonatomic, strong) NSString * version;
 
 + (ETPConfig *)configWithJSONString:(NSString *)string;
+
+/*
+Returns base
+ */
++ (ETPConfig *)defaultConfig;
++ (NSString *)defaultConfigJSONString;
+
 @end

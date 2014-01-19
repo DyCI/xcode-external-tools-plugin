@@ -19,8 +19,11 @@
       [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding]
                                       options:0
                                         error:nil];
-    ETPConfig * config = [self configWithJSONObject:jsonObject];
-    return config;
+    if (jsonObject) {
+        ETPConfig * config = [self configWithJSONObject:jsonObject];
+        return config;
+    }
+    return nil;
 }
 
 
@@ -74,5 +77,36 @@
     return command;
 }
 
+
++ (ETPConfig *)defaultConfig {
+    return [ETPConfig configWithJSONString:[self defaultConfigJSONString]];
+}
+
+
++ (NSString *)defaultConfigJSONString {
+    NSDictionary * configJSON =
+    @{
+      @"version" : ETP_CONFIG_VERSION,
+      @"tools" : @[
+      @{
+        @"name" : ETP_CONFIG_DEFAULT_TOOL,
+        @"key" : @{
+        @"character" : @"X",
+        @"command" : @YES,
+        @"control" : @NO,
+        @"shift" : @YES,
+        @"option" : @NO
+      },
+        @"command" : @{
+        @"line" : ETP_CONFIG_DEFAULT_TOOL_COMMAND_LINE,
+        @"input" : @"none"
+      }
+      }
+    ]
+    };
+
+    NSData * data = [NSJSONSerialization dataWithJSONObject:configJSON options:0 error:nil];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
 
 @end

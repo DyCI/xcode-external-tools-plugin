@@ -15,4 +15,7 @@ typedef NS_ENUM(NSUInteger, ETPInputType) {
 @property(nonatomic, strong) NSString * commandLine;
 @property(nonatomic, assign) ETPInputType inputType;
 
++ (instancetype)commandWithCommandLine:(NSString *)commandLine inputType:(ETPInputType)inputType;
+- (instancetype)initWithCommandLine:(NSString *)commandLine inputType:(ETPInputType)inputType;
+
 @end
