@@ -7,7 +7,13 @@
 //
 
 #import <AppKit/AppKit.h>
+@class ETPConfigurationLoader;
+
 
 @interface ExternalToolsPlugin : NSObject
+
+@property(nonatomic, strong) ETPConfigurationLoader * configurationLoader;
+
+- (id)initWithBundle:(NSBundle *)plugin;
 
 @end

@@ -149,6 +149,7 @@
 				446E3F9718888FA9003A3CCA /* Supporting Files */,
 				4523F9953A0F3CCC13062D0C /* PluginConsole */,
 				4523F281BE21D98366E1912C /* Configuration */,
+				4523F8F38C408B94A860830D /* Menu */,
 			);
 			path = ExternalToolsPlugin;
 			sourceTree = "<group>";
@@ -179,6 +180,13 @@
 				4523FB962875E47118F6CA20 /* ETPConfigurationLoader.h */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4523F8F38C408B94A860830D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		4523F9953A0F3CCC13062D0C /* PluginConsole */ = {
