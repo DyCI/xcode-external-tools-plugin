@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440C0A79188CA3E0005E67CD /* ETPConfigurationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */; };
 		443FAAE01888AEFC00CECE98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9418888FA9003A3CCA /* Foundation.framework */; };
 		443FAAE61888AEFC00CECE98 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443FAAE51888AEFC00CECE98 /* Cedar.framework */; };
 		443FAAE81888AEFC00CECE98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 443FAAE71888AEFC00CECE98 /* main.m */; };
@@ -336,6 +337,7 @@
 				446E3F9E18888FA9003A3CCA /* ExternalToolsPlugin.m in Sources */,
 				4523FF1ADF71BD63EF7B6398 /* LogClient.m in Sources */,
 				4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */,
+				440C0A79188CA3E0005E67CD /* ETPConfigurationLoader.m in Sources */,
 				4523F575B23B343D243D55EA /* ETPTool.m in Sources */,
 				4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */,
 				4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */,
@@ -495,6 +497,7 @@
 				443FAAEC1888AEFC00CECE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446E3F8A18888FA9003A3CCA /* Build configuration list for PBXProject "ExternalToolsPlugin" */ = {
 			isa = XCConfigurationList;
