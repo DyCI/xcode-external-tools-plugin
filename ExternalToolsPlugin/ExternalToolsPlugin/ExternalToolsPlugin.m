@@ -9,6 +9,7 @@
 #import "ExternalToolsPlugin.h"
 #import "LogClient.h"
 #import "ETPConfigurationLoader.h"
+#import "ETPMenuConfigurator.h"
 
 static ExternalToolsPlugin * sharedPlugin;
 
@@ -38,6 +39,7 @@ static ExternalToolsPlugin * sharedPlugin;
         // reference to plugin's bundle, for resource acccess
         self.bundle = plugin;
         self.configurationLoader = [ETPConfigurationLoader new];
+        self.menuConfigurator = [ETPMenuConfigurator new];
 
         [[NSNotificationCenter defaultCenter]
           addObserverForName:NSApplicationDidFinishLaunchingNotification
@@ -56,6 +58,7 @@ static ExternalToolsPlugin * sharedPlugin;
 - (void)setupMenuItems {
 
     ETPConfig * config = [self.configurationLoader loadConfiguration];
+    [self.menuConfigurator configureMenu:[NSApp mainMenu] config:config];
     // Sample Menu Item:
 }
 

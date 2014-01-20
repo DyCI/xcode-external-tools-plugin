@@ -8,11 +8,13 @@
 
 #import <AppKit/AppKit.h>
 @class ETPConfigurationLoader;
+@class ETPMenuConfigurator;
 
 
 @interface ExternalToolsPlugin : NSObject
 
 @property(nonatomic, strong) ETPConfigurationLoader * configurationLoader;
+@property(nonatomic, strong) ETPMenuConfigurator *  menuConfigurator;
 
 - (id)initWithBundle:(NSBundle *)plugin;
 
