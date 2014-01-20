@@ -57,15 +57,6 @@ static ExternalToolsPlugin * sharedPlugin;
 
     ETPConfig * config = [self.configurationLoader loadConfiguration];
     // Sample Menu Item:
-    NSMenuItem * menuItem = [[NSApp mainMenu] itemWithTitle:@"File"];
-    if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem * actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action"
-                                                                 action:@selector(doMenuAction)
-                                                          keyEquivalent:@""];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
-    }
 }
 
 
