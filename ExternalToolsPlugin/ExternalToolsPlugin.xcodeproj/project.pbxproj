@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440C0A79188CA3E0005E67CD /* ETPConfigurationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */; };
 		443FAAE01888AEFC00CECE98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9418888FA9003A3CCA /* Foundation.framework */; };
 		443FAAE61888AEFC00CECE98 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443FAAE51888AEFC00CECE98 /* Cedar.framework */; };
 		443FAAE81888AEFC00CECE98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 443FAAE71888AEFC00CECE98 /* main.m */; };
@@ -15,9 +16,12 @@
 		446E3F9B18888FA9003A3CCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446E3F9918888FA9003A3CCA /* InfoPlist.strings */; };
 		446E3F9E18888FA9003A3CCA /* ExternalToolsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */; };
 		4523F025AD8B4C376C931E56 /* ETPConfigurationLoaderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F7BF4C9B120C23646912 /* ETPConfigurationLoaderSpec.mm */; };
+		4523F0B0A2071D04E41AFB62 /* ETPMenuConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8675E308EBDAB0D596F /* ETPMenuConfigurator.m */; };
 		4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
 		4523F2EFA8A9945BFDF2DF93 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9218888FA9003A3CCA /* AppKit.framework */; };
 		4523F575B23B343D243D55EA /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
+		4523F586F5D685259F2F5BC1 /* ETPMenuConfiguratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F4C8B1700C95A1B2075E /* ETPMenuConfiguratorSpec.mm */; };
+		4523F62F99FC68BB19AD07BE /* ETPMenuConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8675E308EBDAB0D596F /* ETPMenuConfigurator.m */; };
 		4523F660FEC2BCF9A4CB13BF /* ETPConfigSharedExamples.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */; };
 		4523F66C21C4F931FE38F8F7 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8213771514D32500BBA /* LogClient.m */; };
 		4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
@@ -48,10 +52,12 @@
 		446E3F9C18888FA9003A3CCA /* ExternalToolsPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalToolsPlugin.h; sourceTree = "<group>"; };
 		446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExternalToolsPlugin.m; sourceTree = "<group>"; };
 		446E3F9F18888FA9003A3CCA /* ExternalToolsPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExternalToolsPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		4523F0E7EB744715E37E2467 /* ETPMenuConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPMenuConfigurator.h; sourceTree = "<group>"; };
 		4523F2BC143F843BBDBE2962 /* ETPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPTool.h; sourceTree = "<group>"; };
 		4523F419980BA6597B8F56D7 /* ETPConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfig.m; sourceTree = "<group>"; };
 		4523F423DDDB75CD71548A49 /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
 		4523F475FE05DF60773860FA /* ETPConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSpec.mm; sourceTree = "<group>"; };
+		4523F4C8B1700C95A1B2075E /* ETPMenuConfiguratorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPMenuConfiguratorSpec.mm; sourceTree = "<group>"; };
 		4523F4E04C2FFF3600CAE0BA /* ExternalToolsPluginSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ExternalToolsPluginSpec.mm; sourceTree = "<group>"; };
 		4523F515D8C9ED266F1583E0 /* ETPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPTool.m; sourceTree = "<group>"; };
 		4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfigurationLoader.m; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		4523F7BF4C9B120C23646912 /* ETPConfigurationLoaderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigurationLoaderSpec.mm; sourceTree = "<group>"; };
 		4523F8213771514D32500BBA /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogClient.m; sourceTree = "<group>"; };
 		4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSharedExamples.mm; sourceTree = "<group>"; };
+		4523F8675E308EBDAB0D596F /* ETPMenuConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPMenuConfigurator.m; sourceTree = "<group>"; };
 		4523F97B6BDA644FB3A845C0 /* ETPKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPKey.h; sourceTree = "<group>"; };
 		4523FA1FBE2F1A968D83AACF /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
 		4523FA40BBD911DD677E0D07 /* ETPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPConfig.h; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 				4523F4E04C2FFF3600CAE0BA /* ExternalToolsPluginSpec.mm */,
 				4523F7BF4C9B120C23646912 /* ETPConfigurationLoaderSpec.mm */,
 				4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */,
+				4523F4C8B1700C95A1B2075E /* ETPMenuConfiguratorSpec.mm */,
 			);
 			path = ExternalToolsPluginTests;
 			sourceTree = "<group>";
@@ -185,6 +193,8 @@
 		4523F8F38C408B94A860830D /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				4523F0E7EB744715E37E2467 /* ETPMenuConfigurator.h */,
+				4523F8675E308EBDAB0D596F /* ETPMenuConfigurator.m */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -315,6 +325,8 @@
 				4523FDC5B532CEB02CC33007 /* ExternalToolsPlugin.m in Sources */,
 				4523F66C21C4F931FE38F8F7 /* LogClient.m in Sources */,
 				4523F660FEC2BCF9A4CB13BF /* ETPConfigSharedExamples.mm in Sources */,
+				4523F586F5D685259F2F5BC1 /* ETPMenuConfiguratorSpec.mm in Sources */,
+				4523F62F99FC68BB19AD07BE /* ETPMenuConfigurator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +337,11 @@
 				446E3F9E18888FA9003A3CCA /* ExternalToolsPlugin.m in Sources */,
 				4523FF1ADF71BD63EF7B6398 /* LogClient.m in Sources */,
 				4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */,
+				440C0A79188CA3E0005E67CD /* ETPConfigurationLoader.m in Sources */,
 				4523F575B23B343D243D55EA /* ETPTool.m in Sources */,
 				4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */,
 				4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */,
+				4523F0B0A2071D04E41AFB62 /* ETPMenuConfigurator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +497,7 @@
 				443FAAEC1888AEFC00CECE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446E3F8A18888FA9003A3CCA /* Build configuration list for PBXProject "ExternalToolsPlugin" */ = {
 			isa = XCConfigurationList;
