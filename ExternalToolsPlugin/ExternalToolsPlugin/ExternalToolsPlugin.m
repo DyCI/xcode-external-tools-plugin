@@ -44,15 +44,9 @@ static ExternalToolsPlugin * sharedPlugin;
         self.menuConfigurator = [ETPMenuConfigurator new];
         self.commandRunner = [ETPCommandRunner new];
 
-        [[NSNotificationCenter defaultCenter]
-          addObserverForName:NSApplicationDidFinishLaunchingNotification
-                      object:nil
-                       queue:nil
-                  usingBlock:^(NSNotification * note) {
-                      [self setupMenuItems];
-                  }
-        ];
-        // Create menu items, initialize UI, etc.
+        [self onApplicationStart:^{
+            [self setupMenuItems];
+        }];
     }
     return self;
 }
@@ -63,7 +57,9 @@ static ExternalToolsPlugin * sharedPlugin;
     ETPConfig * config = [self.configurationLoader loadConfiguration];
 
     __weak ExternalToolsPlugin * weakSelf = self;
-    [self.menuConfigurator configureMenu:[NSApp mainMenu] config:config
+
+    [self.menuConfigurator configureMenu:[NSApp mainMenu]
+                                  config:config
                       toolSelectionBlock:^(NSMenuItem * menuItem, ETPTool * tool) {
                           [weakSelf.commandRunner runCommand:tool.command];
                       }];
@@ -75,6 +71,23 @@ static ExternalToolsPlugin * sharedPlugin;
     PluginLog(@"Hi there!, I'm a plugin");
 }
 
+
+#pragma mark - Helpers
+
+- (void)onApplicationStart:(void (^)())pFunction {
+    [[NSNotificationCenter defaultCenter]
+      addObserverForName:NSApplicationDidFinishLaunchingNotification
+                  object:nil
+                   queue:nil
+              usingBlock:^(NSNotification * note) {
+                  if (pFunction) {
+                      pFunction();
+                  }
+              }
+    ];
+}
+
+#pragma mark - Dealloc
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

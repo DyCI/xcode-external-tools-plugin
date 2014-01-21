@@ -5,12 +5,34 @@
 
 #import "ETPCommandRunner.h"
 #import "ETPCommand.h"
+#import "DSUnixTaskSubProcessManager.h"
+#import "LogClient.h"
 
 
 @implementation ETPCommandRunner
 
 - (void)runCommand:(ETPCommand *)command {
+    DSUnixShellTask * task = [[DSUnixTaskSubProcessManager sharedManager] shellTask];
+    [task setCommand:command.commandLine];
 
+    //  Setting up handlers
+
+    [task setLaunchHandler:^(DSUnixTask * taskLauncher) {
+        PluginLog(@"Task started %@", command.commandLine);
+    }];
+
+    [task setFailureHandler:^(DSUnixTask * taskLauncher) {
+        PluginLog(@"Task failed %@", command.commandLine);
+        PluginLog(@"Task failed %i", taskLauncher.terminationStatus);
+        PluginLog(@"Task failed %@", taskLauncher.standardError);
+    }];
+
+    [task setTerminationHandler:^(DSUnixTask * taskLauncher) {
+        PluginLog(@"Task terminated %i", taskLauncher.terminationStatus);
+    }];
+    // Showing up handlers
+
+    [task launch];
 }
 
 @end

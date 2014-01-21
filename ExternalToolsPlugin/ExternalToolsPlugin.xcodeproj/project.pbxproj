@@ -27,6 +27,7 @@
 		4523F660FEC2BCF9A4CB13BF /* ETPConfigSharedExamples.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F826F934BEBC3440FF1F /* ETPConfigSharedExamples.mm */; };
 		4523F66C21C4F931FE38F8F7 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8213771514D32500BBA /* LogClient.m */; };
 		4523F6804DF633B7BE9D3639 /* ETPToolMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5A66E055DDF1F8FF361 /* ETPToolMenuItem.m */; };
+		4523F68BC3BF9A845D99A037 /* DSUnixTaskSubProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F3ADEE5240D7659674E1 /* DSUnixTaskSubProcessManager.m */; };
 		4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
 		4523F701CDD93FE14458FFCC /* ETPCommandRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F081AE0E2F348ADD633F /* ETPCommandRunner.m */; };
 		4523F7D3B4BD5F4342C01DD3 /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
@@ -34,11 +35,15 @@
 		4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE2425180C53911628AB /* ETPKey.m */; };
 		4523F8BA1846302F6DD9CF2C /* ETPCommandRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F081AE0E2F348ADD633F /* ETPCommandRunner.m */; };
 		4523F96D5E2656C90168BAE1 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 4523FA1FBE2F1A968D83AACF /* config.json */; };
+		4523F993682B3B5E638E0F73 /* DSUnixTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F223C21FFD26BAEFEBF0 /* DSUnixTask.m */; };
 		4523FA24300333AEC4B3F7D1 /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
 		4523FAC930391D8A03ADC195 /* ETPConfigurationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */; };
 		4523FB1A0CA7A26D97650382 /* ETPToolMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5A66E055DDF1F8FF361 /* ETPToolMenuItem.m */; };
+		4523FD415CE31334B0ECCA38 /* DSUnixShellTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FA7ED576F2ABCFCEACEC /* DSUnixShellTask.m */; };
 		4523FDC5B532CEB02CC33007 /* ExternalToolsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */; };
+		4523FEC07BFC293459D1D876 /* DSUnixTaskRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FD5490132A096FBBF158 /* DSUnixTaskRunner.m */; };
 		4523FEC4331B702B097D4824 /* ETPConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F475FE05DF60773860FA /* ETPConfigSpec.mm */; };
+		4523FECBDCD14E5F54329A1B /* DSUnixTaskAbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FF9FBCF0E879D03AFACB /* DSUnixTaskAbstractManager.m */; };
 		4523FF0DCEFA5C8E3973EB20 /* ExternalToolsPluginSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F4E04C2FFF3600CAE0BA /* ExternalToolsPluginSpec.mm */; };
 		4523FF12E2340B6EDBEA6AEE /* ETPKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE2425180C53911628AB /* ETPKey.m */; };
 		4523FF1ADF71BD63EF7B6398 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8213771514D32500BBA /* LogClient.m */; };
@@ -58,11 +63,17 @@
 		446E3F9C18888FA9003A3CCA /* ExternalToolsPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalToolsPlugin.h; sourceTree = "<group>"; };
 		446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExternalToolsPlugin.m; sourceTree = "<group>"; };
 		446E3F9F18888FA9003A3CCA /* ExternalToolsPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExternalToolsPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		4523F0338D8A36323CD14DB1 /* DSUnixShellTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixShellTask.h; sourceTree = "<group>"; };
+		4523F04D27FA413308602FF9 /* DSUnixTaskInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskInterfaces.h; sourceTree = "<group>"; };
 		4523F081AE0E2F348ADD633F /* ETPCommandRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPCommandRunner.m; sourceTree = "<group>"; };
+		4523F0B0623B6BB40B3601F3 /* DSUnixTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTask.h; sourceTree = "<group>"; };
 		4523F0E7EB744715E37E2467 /* ETPMenuConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPMenuConfigurator.h; sourceTree = "<group>"; };
+		4523F15EED463CD0ED3AC4BB /* DSUnixTaskSubProcessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskSubProcessManager.h; sourceTree = "<group>"; };
 		4523F2020E5033C3BE592755 /* InTimeShouldSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InTimeShouldSyntax.h; sourceTree = "<group>"; };
+		4523F223C21FFD26BAEFEBF0 /* DSUnixTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTask.m; sourceTree = "<group>"; };
 		4523F2BC143F843BBDBE2962 /* ETPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPTool.h; sourceTree = "<group>"; };
 		4523F327352B0C361A47D820 /* ETPToolMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPToolMenuItem.h; sourceTree = "<group>"; };
+		4523F3ADEE5240D7659674E1 /* DSUnixTaskSubProcessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskSubProcessManager.m; sourceTree = "<group>"; };
 		4523F419980BA6597B8F56D7 /* ETPConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfig.m; sourceTree = "<group>"; };
 		4523F423DDDB75CD71548A49 /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
 		4523F475FE05DF60773860FA /* ETPConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSpec.mm; sourceTree = "<group>"; };
@@ -72,7 +83,10 @@
 		4523F511927405721A31FDAE /* Timing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timing.h; sourceTree = "<group>"; };
 		4523F515D8C9ED266F1583E0 /* ETPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPTool.m; sourceTree = "<group>"; };
 		4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfigurationLoader.m; sourceTree = "<group>"; };
+		4523F59C09BC8F0E16CF40F3 /* DSUnixTaskRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskRunner.h; sourceTree = "<group>"; };
+		4523F59CC6B060EF3DC79A50 /* DSUnixTaskAbstractManager+TaskInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTaskAbstractManager+TaskInterface.h"; sourceTree = "<group>"; };
 		4523F5A66E055DDF1F8FF361 /* ETPToolMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPToolMenuItem.m; sourceTree = "<group>"; };
+		4523F5B27C87CAC7E3D413B2 /* DSUnixTaskAbstractManager+SubclassesInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTaskAbstractManager+SubclassesInterface.h"; sourceTree = "<group>"; };
 		4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPCommand.m; sourceTree = "<group>"; };
 		4523F79209BDF067387828F8 /* ETPCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPCommand.h; sourceTree = "<group>"; };
 		4523F7BF4C9B120C23646912 /* ETPConfigurationLoaderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigurationLoaderSpec.mm; sourceTree = "<group>"; };
@@ -84,10 +98,15 @@
 		4523F97B6BDA644FB3A845C0 /* ETPKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPKey.h; sourceTree = "<group>"; };
 		4523FA1FBE2F1A968D83AACF /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
 		4523FA40BBD911DD677E0D07 /* ETPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPConfig.h; sourceTree = "<group>"; };
+		4523FA7ED576F2ABCFCEACEC /* DSUnixShellTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixShellTask.m; sourceTree = "<group>"; };
 		4523FB962875E47118F6CA20 /* ETPConfigurationLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPConfigurationLoader.h; sourceTree = "<group>"; };
 		4523FC306AD16A05F529B34F /* AsyncActualValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncActualValue.h; sourceTree = "<group>"; };
+		4523FCB66B47F33435BA1CD9 /* DSUnixTaskAbstractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskAbstractManager.h; sourceTree = "<group>"; };
+		4523FCB85A700EAA03310BFC /* DSUnixTask+ManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTask+ManagerInterface.h"; sourceTree = "<group>"; };
+		4523FD5490132A096FBBF158 /* DSUnixTaskRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskRunner.m; sourceTree = "<group>"; };
 		4523FE2425180C53911628AB /* ETPKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPKey.m; sourceTree = "<group>"; };
 		4523FE37056543AA85AA3717 /* Timing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Timing.mm; sourceTree = "<group>"; };
+		4523FF9FBCF0E879D03AFACB /* DSUnixTaskAbstractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskAbstractManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +196,7 @@
 				4523F281BE21D98366E1912C /* Configuration */,
 				4523F8F38C408B94A860830D /* Menu */,
 				4523F615A067456D6F8E02A9 /* Runner */,
+				4523F73F8EDFF960DD841D00 /* Libraries */,
 			);
 			path = ExternalToolsPlugin;
 			sourceTree = "<group>";
@@ -189,6 +209,19 @@
 				446E3F9F18888FA9003A3CCA /* ExternalToolsPlugin-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4523F0135E28BFD5DD441382 /* TaskManagers */ = {
+			isa = PBXGroup;
+			children = (
+				4523FCB66B47F33435BA1CD9 /* DSUnixTaskAbstractManager.h */,
+				4523FF9FBCF0E879D03AFACB /* DSUnixTaskAbstractManager.m */,
+				4523F15EED463CD0ED3AC4BB /* DSUnixTaskSubProcessManager.h */,
+				4523F3ADEE5240D7659674E1 /* DSUnixTaskSubProcessManager.m */,
+				4523F59CC6B060EF3DC79A50 /* DSUnixTaskAbstractManager+TaskInterface.h */,
+				4523F5B27C87CAC7E3D413B2 /* DSUnixTaskAbstractManager+SubclassesInterface.h */,
+			);
+			path = TaskManagers;
 			sourceTree = "<group>";
 		};
 		4523F281BE21D98366E1912C /* Configuration */ = {
@@ -209,6 +242,26 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		4523F45D3D496634021B7D03 /* DSUnixTask */ = {
+			isa = PBXGroup;
+			children = (
+				4523F9E9C460CCDA08FFA6D1 /* Core */,
+			);
+			path = DSUnixTask;
+			sourceTree = "<group>";
+		};
+		4523F614E2C429D9B1DD43B7 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				4523F0B0623B6BB40B3601F3 /* DSUnixTask.h */,
+				4523F223C21FFD26BAEFEBF0 /* DSUnixTask.m */,
+				4523F0338D8A36323CD14DB1 /* DSUnixShellTask.h */,
+				4523FA7ED576F2ABCFCEACEC /* DSUnixShellTask.m */,
+				4523FCB85A700EAA03310BFC /* DSUnixTask+ManagerInterface.h */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		4523F615A067456D6F8E02A9 /* Runner */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +269,23 @@
 				4523F8BBEF98372A94606B66 /* ETPCommandRunner.h */,
 			);
 			path = Runner;
+			sourceTree = "<group>";
+		};
+		4523F64EFA2E7C9F2ACEFB48 /* TaskRunner */ = {
+			isa = PBXGroup;
+			children = (
+				4523F59C09BC8F0E16CF40F3 /* DSUnixTaskRunner.h */,
+				4523FD5490132A096FBBF158 /* DSUnixTaskRunner.m */,
+			);
+			path = TaskRunner;
+			sourceTree = "<group>";
+		};
+		4523F73F8EDFF960DD841D00 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4523F45D3D496634021B7D03 /* DSUnixTask */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		4523F7A57F574A3B81EB9102 /* Headers */ = {
@@ -254,6 +324,17 @@
 				4523FBCF68F8E7C4348C6D9D /* CedarAsync */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		4523F9E9C460CCDA08FFA6D1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4523F614E2C429D9B1DD43B7 /* Tasks */,
+				4523F64EFA2E7C9F2ACEFB48 /* TaskRunner */,
+				4523F0135E28BFD5DD441382 /* TaskManagers */,
+				4523F04D27FA413308602FF9 /* DSUnixTaskInterfaces.h */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		4523FBCF68F8E7C4348C6D9D /* CedarAsync */ = {
@@ -406,6 +487,11 @@
 				4523F0B0A2071D04E41AFB62 /* ETPMenuConfigurator.m in Sources */,
 				4523F701CDD93FE14458FFCC /* ETPCommandRunner.m in Sources */,
 				4523F6804DF633B7BE9D3639 /* ETPToolMenuItem.m in Sources */,
+				4523F993682B3B5E638E0F73 /* DSUnixTask.m in Sources */,
+				4523FD415CE31334B0ECCA38 /* DSUnixShellTask.m in Sources */,
+				4523FEC07BFC293459D1D876 /* DSUnixTaskRunner.m in Sources */,
+				4523FECBDCD14E5F54329A1B /* DSUnixTaskAbstractManager.m in Sources */,
+				4523F68BC3BF9A845D99A037 /* DSUnixTaskSubProcessManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
