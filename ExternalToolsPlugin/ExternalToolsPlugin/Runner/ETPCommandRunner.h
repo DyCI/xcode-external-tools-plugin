@@ -5,10 +5,19 @@
 
 #import <Foundation/Foundation.h>
 @class ETPCommand;
+@class DSUnixTaskAbstractManager;
 
 
 @interface ETPCommandRunner : NSObject
 
+/*
+Task manager that will run commands
+ */
+@property(nonatomic, strong) DSUnixTaskAbstractManager * taskManager;
+
+/*
+Performs command run
+ */
 - (void)runCommand:(ETPCommand *)command;
 
 @end

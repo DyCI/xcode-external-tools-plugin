@@ -7,12 +7,13 @@
 #import "ETPCommand.h"
 #import "DSUnixTaskSubProcessManager.h"
 #import "LogClient.h"
+#import "DSUnixTaskAbstractManager.h"
 
 
 @implementation ETPCommandRunner
 
 - (void)runCommand:(ETPCommand *)command {
-    DSUnixShellTask * task = [[DSUnixTaskSubProcessManager sharedManager] shellTask];
+    DSUnixShellTask * task = [self.taskManager shellTask];
     [task setCommand:command.commandLine];
 
     //  Setting up handlers

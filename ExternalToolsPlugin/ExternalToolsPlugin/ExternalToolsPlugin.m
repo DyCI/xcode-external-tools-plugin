@@ -12,6 +12,7 @@
 #import "ETPMenuConfigurator.h"
 #import "ETPCommandRunner.h"
 #import "ETPTool.h"
+#import "DSUnixTaskSubProcessManager.h"
 
 static ExternalToolsPlugin * sharedPlugin;
 
@@ -43,6 +44,7 @@ static ExternalToolsPlugin * sharedPlugin;
         self.configurationLoader = [ETPConfigurationLoader new];
         self.menuConfigurator = [ETPMenuConfigurator new];
         self.commandRunner = [ETPCommandRunner new];
+        self.commandRunner.taskManager = [NSClassFromString(@"DSUnixTaskSubProcessManager") sharedManager];
 
         [self onApplicationStart:^{
             [self setupMenuItems];

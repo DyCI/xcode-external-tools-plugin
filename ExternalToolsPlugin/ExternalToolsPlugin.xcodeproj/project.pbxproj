@@ -20,6 +20,7 @@
 		4523F1215E43DE2D316FEC89 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
 		4523F280708378C4BDF76DE9 /* Timing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE37056543AA85AA3717 /* Timing.mm */; };
 		4523F2EFA8A9945BFDF2DF93 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E3F9218888FA9003A3CCA /* AppKit.framework */; };
+		4523F321FEE8904FFFCA31DC /* DSUnixShellTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FA7ED576F2ABCFCEACEC /* DSUnixShellTask.m */; };
 		4523F5687A47BE59F2313719 /* ETPCommandRunnerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F8CA5452666D4124D1E3 /* ETPCommandRunnerSpec.mm */; };
 		4523F575B23B343D243D55EA /* ETPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F515D8C9ED266F1583E0 /* ETPTool.m */; };
 		4523F586F5D685259F2F5BC1 /* ETPMenuConfiguratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F4C8B1700C95A1B2075E /* ETPMenuConfiguratorSpec.mm */; };
@@ -30,6 +31,7 @@
 		4523F68BC3BF9A845D99A037 /* DSUnixTaskSubProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F3ADEE5240D7659674E1 /* DSUnixTaskSubProcessManager.m */; };
 		4523F6FF00C2D6EEAC3E34CA /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
 		4523F701CDD93FE14458FFCC /* ETPCommandRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F081AE0E2F348ADD633F /* ETPCommandRunner.m */; };
+		4523F76EA28E6845BFC1626E /* DSUnixTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F223C21FFD26BAEFEBF0 /* DSUnixTask.m */; };
 		4523F7D3B4BD5F4342C01DD3 /* ETPConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F419980BA6597B8F56D7 /* ETPConfig.m */; };
 		4523F829C321F4FFE3F08EA0 /* ETPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F6F10AF52B9EC85BA5A2 /* ETPCommand.m */; };
 		4523F883E3A79A80B045BCD7 /* ETPKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FE2425180C53911628AB /* ETPKey.m */; };
@@ -40,6 +42,7 @@
 		4523FAC930391D8A03ADC195 /* ETPConfigurationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5230267C2F03B771097 /* ETPConfigurationLoader.m */; };
 		4523FB1A0CA7A26D97650382 /* ETPToolMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523F5A66E055DDF1F8FF361 /* ETPToolMenuItem.m */; };
 		4523FD415CE31334B0ECCA38 /* DSUnixShellTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FA7ED576F2ABCFCEACEC /* DSUnixShellTask.m */; };
+		4523FD4903CE7B923F9C66AE /* DSUnixTaskAbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FF9FBCF0E879D03AFACB /* DSUnixTaskAbstractManager.m */; };
 		4523FDC5B532CEB02CC33007 /* ExternalToolsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 446E3F9D18888FA9003A3CCA /* ExternalToolsPlugin.m */; };
 		4523FEC07BFC293459D1D876 /* DSUnixTaskRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4523FD5490132A096FBBF158 /* DSUnixTaskRunner.m */; };
 		4523FEC4331B702B097D4824 /* ETPConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4523F475FE05DF60773860FA /* ETPConfigSpec.mm */; };
@@ -470,6 +473,9 @@
 				4523F5687A47BE59F2313719 /* ETPCommandRunnerSpec.mm in Sources */,
 				4523F280708378C4BDF76DE9 /* Timing.mm in Sources */,
 				4523FB1A0CA7A26D97650382 /* ETPToolMenuItem.m in Sources */,
+				4523FD4903CE7B923F9C66AE /* DSUnixTaskAbstractManager.m in Sources */,
+				4523F76EA28E6845BFC1626E /* DSUnixTask.m in Sources */,
+				4523F321FEE8904FFFCA31DC /* DSUnixShellTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
