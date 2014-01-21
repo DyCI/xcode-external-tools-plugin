@@ -3,6 +3,8 @@
 #import "ETPConfig.h"
 #import "ETPTool.h"
 #import "ETPKey.h"
+#import "CedarAsync.h"
+#import "ETPToolMenuItem.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -27,15 +29,15 @@ describe(@"ETPMenuConfigurator", ^{
 
         context(@"With invalid values", ^{
             it(@"should not crash", ^{
-                ^{[model configureMenu:nil config:nil];} should_not raise_exception ;
-                ^{[model configureMenu:[NSMenu new] config:nil];} should_not raise_exception ;
-                ^{[model configureMenu:nil config:[ETPConfig defaultConfig]];} should_not raise_exception ;
+                ^{ [model configureMenu:nil config:nil toolSelectionBlock:nil];} should_not raise_exception ;
+                ^{ [model configureMenu:[NSMenu new] config:nil toolSelectionBlock:nil];} should_not raise_exception ;
+                ^{ [model configureMenu:nil config:[ETPConfig defaultConfig] toolSelectionBlock:nil];} should_not raise_exception ;
             });
 
             it(@"should return NO", ^{
-                [model configureMenu:nil config:nil] should equal(NO);
-                [model configureMenu:[NSMenu new] config:nil] should equal(NO);
-                [model configureMenu:nil config:[ETPConfig defaultConfig]] should equal(NO);
+                [model configureMenu:nil config:nil toolSelectionBlock:nil] should equal(NO);
+                [model configureMenu:[NSMenu new] config:nil toolSelectionBlock:nil] should equal(NO);
+                [model configureMenu:nil config:[ETPConfig defaultConfig] toolSelectionBlock:nil] should equal(NO);
             });
 
         });
@@ -54,14 +56,13 @@ describe(@"ETPMenuConfigurator", ^{
             });
 
             it(@"should add separator to it's submenu", ^{
-                [model configureMenu:(id)menu config:[ETPConfig defaultConfig]] should equal(NO);
-
+                [model configureMenu:(id) menu config:[ETPConfig defaultConfig] toolSelectionBlock:nil];
                 [[[subMenu itemArray] firstObject] isSeparatorItem] should equal(YES);
 
             });
 
             it(@"should add menu items with Remote tools title and submenu", ^{
-                [model configureMenu:(id)menu config:[ETPConfig defaultConfig]] should equal(NO);
+                [model configureMenu:(id) menu config:[ETPConfig defaultConfig] toolSelectionBlock:nil];
 
                 [[[subMenu itemArray] lastObject] isSeparatorItem] should equal(NO);
                 [[[subMenu itemArray] lastObject] title] should equal(@"Remote tools");
@@ -75,16 +76,55 @@ describe(@"ETPMenuConfigurator", ^{
                     config = [ETPConfig defaultConfig];
                 });
 
+                it(@"should return YES", ^{
+                    [model configureMenu:(id) menu config:config toolSelectionBlock:nil] should equal(YES);
+                });
+
                 it(@"should add one item per tool", ^{
-                    [model configureMenu:(id) menu config:config] should equal(NO);
+                    [model configureMenu:(id) menu config:config toolSelectionBlock:nil];
                     remoteToolsSubmenu = [[[subMenu itemArray] lastObject] submenu];
                     [[remoteToolsSubmenu itemArray] count] should equal(config.tools.count);
                 });
 
                 it(@"should have created one menu item per tool", ^{
                     spy_on(model);
-                    [model configureMenu:(id) menu config:config] should equal(NO);
+                    [model configureMenu:(id) menu config:config toolSelectionBlock:nil];
                     model should have_received(@selector(menuItemForTool:)).with(config.tools.firstObject);
+                });
+
+                context(@"And user selects menuItem", ^{
+
+                    __block NSMenuItem * toolMenuItem;
+                    __block ETPTool * selectedTool;
+                    __block NSMenuItem * selectedMenuItem;
+
+                    beforeEach(^{
+                        selectedMenuItem = nil;
+                        selectedTool = nil;
+
+                        [model configureMenu:(id) menu config:config toolSelectionBlock:^(NSMenuItem * menuItem, ETPTool * tool) {
+                            selectedMenuItem = menuItem;
+                            selectedTool = tool;
+                        }];
+
+                        remoteToolsSubmenu = [[[subMenu itemArray] lastObject] submenu];
+                        toolMenuItem = [remoteToolsSubmenu itemArray][0];
+
+                        [[toolMenuItem target] performSelector:toolMenuItem.action withObject:toolMenuItem];
+                    });
+
+                    it(@"should call toolSelectionBlock", ^{
+                        in_time(selectedMenuItem) should_not be_nil;
+                        in_time(selectedTool) should_not be_nil;
+                    });
+
+                    it(@"should call toolSelectionblock with item that was selected", ^{
+                        in_time(selectedMenuItem) should equal(toolMenuItem);
+                    });
+
+                    it(@"should call toolSelectionblock with tool that was selected", ^{
+                        in_time(selectedTool) should equal(toolMenuItem.representedObject);
+                    });
                 });
 
             });
@@ -99,7 +139,7 @@ describe(@"ETPMenuConfigurator", ^{
             });
 
             it(@"should return NO", ^{
-                [model configureMenu:(id)menu config:[ETPConfig defaultConfig]] should equal(NO);
+                [model configureMenu:(id) menu config:[ETPConfig defaultConfig] toolSelectionBlock:nil] should equal(NO);
             });
 
         });
@@ -143,6 +183,12 @@ describe(@"ETPMenuConfigurator", ^{
                 tool.name = @"123";
                 tool.key = key;
                 [[model menuItemForTool:tool] keyEquivalentModifierMask] should equal(tool.key.modifierMask);
+            });
+
+            it(@"should have represented object set to this tool", ^{
+                tool.name = @"123";
+                tool.key = key;
+                [[model menuItemForTool:tool] representedObject] should equal(tool);
             });
 
 
