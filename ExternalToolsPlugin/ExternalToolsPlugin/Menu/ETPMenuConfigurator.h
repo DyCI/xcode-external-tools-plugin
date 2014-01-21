@@ -7,18 +7,21 @@
 @class ETPConfig;
 @class NSMenu;
 @class ETPTool;
+@class ETPToolMenuItem;
 
+typedef void (^ETPToolSelectionBlock)(NSMenuItem * menuItem, ETPTool * tool);
 
 @interface ETPMenuConfigurator : NSObject
 
 /*
 Performs menu configuration, based on specified config
+tolSelection block - block that should be called once tool have selected
  */
-- (BOOL)configureMenu:(NSMenu *)menu config:(ETPConfig *)config;
+- (BOOL)configureMenu:(NSMenu *)menu config:(ETPConfig *)config toolSelectionBlock:(ETPToolSelectionBlock)toolSelectionBlock;
 
 /*
 Creates menu item for specified tool
  */
-- (NSMenuItem *)menuItemForTool:(ETPTool * )tool;
+- (ETPToolMenuItem *)menuItemForTool:(ETPTool * )tool;
 
 @end

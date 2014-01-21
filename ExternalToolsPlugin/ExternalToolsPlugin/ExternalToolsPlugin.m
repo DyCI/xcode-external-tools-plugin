@@ -10,6 +10,9 @@
 #import "LogClient.h"
 #import "ETPConfigurationLoader.h"
 #import "ETPMenuConfigurator.h"
+#import "ETPCommandRunner.h"
+#import "ETPTool.h"
+#import "DSUnixTaskSubProcessManager.h"
 
 static ExternalToolsPlugin * sharedPlugin;
 
@@ -40,16 +43,12 @@ static ExternalToolsPlugin * sharedPlugin;
         self.bundle = plugin;
         self.configurationLoader = [ETPConfigurationLoader new];
         self.menuConfigurator = [ETPMenuConfigurator new];
+        self.commandRunner = [ETPCommandRunner new];
+        self.commandRunner.taskManager = [NSClassFromString(@"DSUnixTaskSubProcessManager") sharedManager];
 
-        [[NSNotificationCenter defaultCenter]
-          addObserverForName:NSApplicationDidFinishLaunchingNotification
-                      object:nil
-                       queue:nil
-                  usingBlock:^(NSNotification * note) {
-                      [self setupMenuItems];
-                  }
-        ];
-        // Create menu items, initialize UI, etc.
+        [self onApplicationStart:^{
+            [self setupMenuItems];
+        }];
     }
     return self;
 }
@@ -58,8 +57,14 @@ static ExternalToolsPlugin * sharedPlugin;
 - (void)setupMenuItems {
 
     ETPConfig * config = [self.configurationLoader loadConfiguration];
-    [self.menuConfigurator configureMenu:[NSApp mainMenu] config:config];
-    // Sample Menu Item:
+
+    __weak ExternalToolsPlugin * weakSelf = self;
+
+    [self.menuConfigurator configureMenu:[NSApp mainMenu]
+                                  config:config
+                      toolSelectionBlock:^(NSMenuItem * menuItem, ETPTool * tool) {
+                          [weakSelf.commandRunner runCommand:tool.command];
+                      }];
 }
 
 
@@ -68,6 +73,23 @@ static ExternalToolsPlugin * sharedPlugin;
     PluginLog(@"Hi there!, I'm a plugin");
 }
 
+
+#pragma mark - Helpers
+
+- (void)onApplicationStart:(void (^)())pFunction {
+    [[NSNotificationCenter defaultCenter]
+      addObserverForName:NSApplicationDidFinishLaunchingNotification
+                  object:nil
+                   queue:nil
+              usingBlock:^(NSNotification * note) {
+                  if (pFunction) {
+                      pFunction();
+                  }
+              }
+    ];
+}
+
+#pragma mark - Dealloc
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
