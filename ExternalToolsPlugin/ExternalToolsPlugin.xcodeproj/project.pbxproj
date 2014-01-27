@@ -77,6 +77,7 @@
 		4523F2BC143F843BBDBE2962 /* ETPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPTool.h; sourceTree = "<group>"; };
 		4523F327352B0C361A47D820 /* ETPToolMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPToolMenuItem.h; sourceTree = "<group>"; };
 		4523F3ADEE5240D7659674E1 /* DSUnixTaskSubProcessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskSubProcessManager.m; sourceTree = "<group>"; };
+		4523F40BBF80109F1C079D04 /* CDRSXcodeInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRSXcodeInterfaces.h; sourceTree = "<group>"; };
 		4523F419980BA6597B8F56D7 /* ETPConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPConfig.m; sourceTree = "<group>"; };
 		4523F423DDDB75CD71548A49 /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
 		4523F475FE05DF60773860FA /* ETPConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ETPConfigSpec.mm; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 				4523F8F38C408B94A860830D /* Menu */,
 				4523F615A067456D6F8E02A9 /* Runner */,
 				4523F73F8EDFF960DD841D00 /* Libraries */,
+				4523F02C3C8A62B7E8B2FDD3 /* Xcode */,
 			);
 			path = ExternalToolsPlugin;
 			sourceTree = "<group>";
@@ -225,6 +227,14 @@
 				4523F5B27C87CAC7E3D413B2 /* DSUnixTaskAbstractManager+SubclassesInterface.h */,
 			);
 			path = TaskManagers;
+			sourceTree = "<group>";
+		};
+		4523F02C3C8A62B7E8B2FDD3 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				4523F40BBF80109F1C079D04 /* CDRSXcodeInterfaces.h */,
+			);
+			path = Xcode;
 			sourceTree = "<group>";
 		};
 		4523F281BE21D98366E1912C /* Configuration */ = {
